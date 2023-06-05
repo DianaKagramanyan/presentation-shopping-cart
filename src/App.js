@@ -2,10 +2,13 @@ import Navbar from "./components/Navbar";
 import Amazon from "./components/Amazon";
 import {useState} from "react";
 import Cart from "./components/Cart";
+import Input from "./components/Input";
 
 function App() {
   const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
+
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
     setCart([...cart, item])
@@ -25,9 +28,12 @@ function App() {
   return (
     <div className="App">
       <Navbar setShow={setShow} size={cart.length}/>
+      <Input searchInput={searchInput}
+             setSearchInput={setSearchInput}
+      />
       {
         show ? (
-          <Amazon handleClick={handleClick}/>
+          <Amazon handleClick={handleClick} searchInput={searchInput}/>
         ) : (
           <Cart cart={cart} setCart={setCart} handleChange={handleChange}/>)
       }
