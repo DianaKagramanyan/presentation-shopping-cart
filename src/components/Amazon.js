@@ -3,13 +3,13 @@ import list from "../data";
 import Cards from "./Cards";
 import '../styles/Amazon.css';
 
-const Amazon = () => {
+const Amazon = ({handleClick}) => {
+
   return (
     <section>
       {
         list.map((item) =>
-          (<Cards key={item.id}
-                  item={item}
+          (<Cards key={item.id} item={item} handleClick={handleClick}
           />))}
     </section>
   );
