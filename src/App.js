@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Amazon from "./components/Amazon";
 import {useState} from "react";
 import Cart from "./components/Cart";
-import Input from "./components/Input";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -18,7 +17,7 @@ function App() {
     const arr = cart;
     arr[ind].amount += d;
 
-    if(arr[ind].amount === 0) arr[ind].amount = 1;
+    if (arr[ind].amount === 0) arr[ind].amount = 1;
     setCart([...arr]);
   }
   // useEffect(() => {
@@ -27,9 +26,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setShow={setShow} size={cart.length}/>
-      <Input searchInput={searchInput}
-             setSearchInput={setSearchInput}
+      <Navbar setShow={setShow} size={cart.length}
+              searchInput={searchInput}
+              setSearchInput={setSearchInput}
       />
       {
         show ? (

@@ -14,7 +14,6 @@ const Amazon = ({handleClick, searchInput}) => {
         />
       ))}
 
-
       {/*{*/}
       {/*  list.map((item) =>*/}
       {/*    (<Cards key={item.id} item={item} handleClick={handleClick}*/}

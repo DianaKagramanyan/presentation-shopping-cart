@@ -1,9 +1,11 @@
 import '../styles/Input.css'
-const Input = (props) => {
+
+const Input = ({searchInput, setSearchInput}) => {
+
   return (
     <div className="input-group mb-3">
-      <input value={props.searchInput}
-             onChange={(event) => props.setSearchInput(event.target.value)}
+      <input value={searchInput}
+             onChange={(event) => setSearchInput(event.target.value)}
              type="text"
              className="form-control"
              placeholder="Search for product"
@@ -11,5 +13,4 @@ const Input = (props) => {
     </div>
   );
 };
-
 export default Input;
