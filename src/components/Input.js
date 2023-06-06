@@ -9,7 +9,8 @@ const Input = ({searchInput, setSearchInput}) => {
              type="text"
              className="form-control"
              placeholder="Search for product"
-             aria-label="Recipient's username with two button addons"/>
+             aria-label="Recipient's username with two button addons"
+      />
     </div>
   );
 };
