@@ -44,4 +44,9 @@ section {
     outline: none;
     border-radius: 2px;
 }
+/*@media screen and(max-width: 700px){*/
+/*    .cards {*/
+/*        margin-top: 200px;*/
+/*    }*/
 
+/*}*/
